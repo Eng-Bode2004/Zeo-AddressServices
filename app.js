@@ -13,5 +13,5 @@ app.use(express.json()); // Middleware to parse JSON
 
 // Main Routes
                          //  AddressRoutes Routes //
-const StoreAddressRoutes = require("./routes/StoreAddressRoutes");
+const StoreAddressRoutes = require("./Routes/StoreAddressRoutes");
 app.use('/api/store-address',StoreAddressRoutes);
