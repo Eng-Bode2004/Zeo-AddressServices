@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Eng-Bode2004/Zeo-AddressServices/issues"
   },
-  "homepage": "https://github.com/Eng-Bode2004/Zeo-AddressServices#readme"
+  "homepage": "https://github.com/Eng-Bode2004/Zeo-AddressServices#readme",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.0"
+  }
 }
