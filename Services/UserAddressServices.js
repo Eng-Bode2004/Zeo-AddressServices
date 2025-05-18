@@ -58,10 +58,10 @@ class AddressService {
 
     async getUserAddress(userId) {
         if (!userId) {
-            return Promise.reject(new Error('UserId required'));
+            return Promise.reject(new Error('userId required'));
         }
 
-        const address = await UserAddress.findOne({ UserId: userId });
+        const address = await UserAddress.findOne({ userId: userId });
 
         if (!address) {
             return Promise.reject(new Error('Address not found for this user'));
