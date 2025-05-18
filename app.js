@@ -11,7 +11,12 @@ app.use(express.json()); // Middleware to parse JSON
 
 
 
-// Main Routes
-                         //  AddressRoutes Routes //
+                                // Main Routes
+                         // Store Address Routes  //
 const StoreAddressRoutes = require("./Routes/StoreAddressRoutes");
 app.use('/api/store-address',StoreAddressRoutes);
+
+                       //User Address Routes  //
+const UserAddressRoutes = require("./Routes/UserAddressRoutes");
+app.use('/api/user-address',UserAddressRoutes);
+
