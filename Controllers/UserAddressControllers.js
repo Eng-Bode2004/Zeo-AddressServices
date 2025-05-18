@@ -17,7 +17,7 @@ class UserAddressController {
 
             res.status(201).json({
                 status: 'success',
-                message: 'Store address created successfully.',
+                message: 'User address created successfully.',
                 data: address
             });
         } catch (error) {
