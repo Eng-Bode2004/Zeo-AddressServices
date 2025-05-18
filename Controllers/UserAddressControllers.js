@@ -9,7 +9,7 @@ class UserAddressController {
             if (!userId || longitude == null || latitude == null) {
                 return res.status(400).json({
                     status: 'failure',
-                    message: 'storeId, longitude, and latitude are required.'
+                    message: 'userId, longitude, and latitude are required.'
                 });
             }
 
