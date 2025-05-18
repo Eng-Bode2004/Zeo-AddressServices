@@ -28,6 +28,26 @@ class UserAddressController {
             });
         }
     }
+
+    async getAddress(req, res) {
+        try {
+            const { userId } = req.params;
+
+            const address = await AddressService.getUserAddress(userId);
+
+            res.status(200).json({
+                status: 'success',
+                message: 'User address retrieved successfully.',
+                data: address
+            });
+        } catch (error) {
+            res.status(400).json({
+                status: 'failure',
+                message: 'Failed to retrieve address.',
+                error: error.message
+            });
+        }
+    }
 }
 
 module.exports = new UserAddressController();

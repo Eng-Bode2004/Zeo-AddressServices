@@ -55,6 +55,21 @@ class AddressService {
             return Promise.reject(error);
         }
     }
+
+    async getUserAddress(userId) {
+        if (!userId) {
+            return Promise.reject(new Error('UserId required'));
+        }
+
+        const address = await UserAddress.findOne({ UserId: userId });
+
+        if (!address) {
+            return Promise.reject(new Error('Address not found for this user'));
+        }
+
+        return address;
+    }
+
 }
 
 module.exports = new AddressService();
